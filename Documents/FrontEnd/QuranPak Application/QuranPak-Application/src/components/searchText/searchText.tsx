@@ -49,7 +49,8 @@ const SearchText = () => {
                     <div className={`py-5 mt-2 ${data && searchClicked ? "h-96" : "h-auto"}   bottom-0 top-0 overflow-y-scroll rounded-lg bg-white px-3 cursor-pointer`}>
                         {   isLoading && searchClicked ? (
                             <SearchTextSkeleton />
-                        ) :   isFetching ? <Spinner/> : isError ? <h1>Data is not founf</h1> : (
+                        ) :   isFetching ? <Spinner/> : isError ? <h1>Data is not founf</h1> :
+                        (
 
                             data && searchClicked ? data.data.matches.map((item, i) => (
                                 <div key={i}>
